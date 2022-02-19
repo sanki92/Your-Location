@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: black;
+  color: aliceblue;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#map-card{
+  width: 10vw;
+  border-radius: 25px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.map{
+  width: fit-content;
+  border:5px solid #6565e1;
+  border-radius: 30px;
+  margin: 2rem auto;
 }
+.details{
+  width: fit-content;
+  margin: 2rem auto;
+  background-color: #6464bf;
+  border-radius: 15px;
+  box-shadow: inset 5px -5px 20px rgba(0, 0, 0, 0.583);
+  font-family: 'Arimo';
+  font-style: italic;
+  font-weight: bold;
+  font-size: .9rem;
 
-.App-link {
-  color: #61dafb;
 }
+.details span{
+  font-style: normal;
+  font-weight: normal;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

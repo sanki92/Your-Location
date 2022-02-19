@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import React,{ useEffect, useState } from 'react'
+import Mapbox from './components/Mapbox';
+// import Map from 'react-map-gl';
 
 function App() {
+
+
+
+
+  const [ip, setip] = useState(null)
+  useEffect(async() => {
+      let data =await fetch('https://api.ipify.org/?format=json')
+      let parsedData = await data.json();
+      console.log(parsedData)
+      setip(parsedData.ip)
+    }, [])
+    
+    
+  
+    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Mapbox/>
     </div>
   );
 }
